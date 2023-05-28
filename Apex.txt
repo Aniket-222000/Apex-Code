@@ -1,0 +1,108 @@
+1] Create an application of Calculator in SalesForce.com using Apex programming Language
+Code :
+public class test100 {
+    
+    public static Decimal add(Decimal a1,Decimal a2) {
+ Decimal value1 = a1 + a2;
+    System.debug('the sum is : '+value1);
+        return value1;
+    }
+
+    public static Decimal sub(Decimal a1,Decimal a2) {
+ Decimal value2 = a1 - a2;
+    System.debug('the sub is : '+value2);
+        return value2;
+    }
+    public static Decimal mul(Decimal a1,Decimal a2) {
+ Decimal value3 = a1 * a2;
+    System.debug('the mul is : '+value3);
+        return value3;
+    }
+    
+    public static Decimal div(Decimal a1,Decimal a2) {
+ Decimal value4 = a1 / a2;
+    System.debug('the div is : '+value4);
+        return value4;
+    }
+
+    
+    
+}test100.add(4,2);
+test100.sub(4,2);
+Window Code :
+
+test100.add(4,2);
+test100.sub(4,2);
+test100.mul(4,2);
+test100.div(4,2);
+46 AM
+
+=================================================================
+2] Create an application of Temperature Conversion from Celsius to Fahrenheit in SalesForce.com using Apex programming Language
+Code :
+public class tempConvetApp {
+    public static void convertCelsiusToFahrenheit(Decimal celsius) {
+        Decimal fahrenheit = (celsius * 9 / 5) + 32;
+        System.debug('Celsius: ' + celsius + ' | Fahrenheit: ' + fahrenheit);
+    }}
+
+Window Code :
+Decimal celsiusValue = 25;
+tempConvetApp.convertCelsiusToFahrenheit(celsiusValue);
+
+public class temperature {
+    public static Decimal cal(Decimal f) {
+ Decimal value = (f-32)* 5/9;
+    System.debug('the result is '+value);
+        return value;
+    }
+}
+
+
+Output:
+temperature.cal(56);
+================================================================
+3] Create an application of Palindrome in SalesForce.com using Apex programming Language.
+
+Code :
+public class PalindromeCheck {
+    public static void checkPalindrome(String input) {
+         String reversedString = '';
+        for(Integer i = input.length() - 1; i >= 0; i--) {
+            reversedString += input.substring(i, i+1);
+        }
+              if (input.equalsIgnoreCase(reversedString)) {
+            System.debug(input + ' is a palindrome.');
+        } else {
+            System.debug(input+ ' is not a palindrome.');
+        }
+    }
+    }
+
+Window Code :
+String inputString = 'Kartik Ahire The Chutiya Boy';
+PalindromeCheck.checkPalindrome(inputString);
+
+String inputString2 = 'Hello, Kartik';
+PalindromeCheck.checkPalindrome(inputString2);
+
+=================================================================
+4] Create an application of Reverse the String in SalesForce.com using Apex programming Language.
+Code : 
+public class StringReversal {
+    public static String reverseString(String input) {
+        String reversedString = '';
+        
+        for (Integer i = input.length() - 1; i >= 0; i--) {
+            reversedString += input.substring(i, i+1);
+        }
+        
+        return reversedString;
+    }
+}
+
+Window Code :
+String inputString = 'Hello, Tushar Bari';
+String reversedString = StringReversal.reverseString(inputString);
+System.debug('Reversed String: ' + reversedString); 
+
